@@ -100,12 +100,25 @@ AUTH_USER_MODEL = 'authentication.User'
 if DEBUG:
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "informat_tehran03",
+            "USER": "informat_admin",
+            "PASSWORD": "sham818181",
+            "OPTIONS": {
+                 "autocommit": True   
+            }
     }
 else:
-    pass
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "informat_tehran03",
+            "USER": "informat_admin",
+            "PASSWORD": "sham818181",
+            "OPTIONS": {
+                 "autocommit": True   
+            }
+    }
 
 
 # Password validation
